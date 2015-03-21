@@ -1,2 +1,56 @@
-h1
-	color green
+@import "normalize.styl"
+
+gris_oscuro = #333333
+gris_claro = #818181
+
+//ocss clases
+.relative
+	position relative
+.border-bottom
+	border-bottom 1px solid gris_claro
+
+body
+	font-family "Lato"
+	font-size 16px
+figure
+	margin 0
+a
+	text-decoration none
+
+.header
+	margin 0
+	height 3.5em
+	.button-menu
+		position absolute
+		top 50%
+		margin-top -10px
+	.menu
+		display none
+	.title
+		font-size 1.1em
+		text-align center
+		margin 0
+		line-height 3.5em
+
+
+.container
+	padding 1.4rem
+	display flex
+	font-size 0
+	flex-wrap wrap
+	justify-content space-around
+	.song
+		width 128px
+		font-size 1rem
+		margin 0
+		&:nth-child(even)
+			background #3effcb
+		p
+			margin .5em 0
+		.name
+			color gris_oscuro
+		.autor
+			color gris_claro
+
+	
+	
