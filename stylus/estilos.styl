@@ -1,29 +1,71 @@
 @import "normalize.styl"
+@import "fonts.styl"
 
 gris_oscuro = #333333
 gris_claro = #818181
+fucsia = #ef225c
+
+//border redondeados barras de estado
+.border-round
+	border-radius 5px
+	
 
 //ocss clases
+.center-block
+	margin 0 auto
+	width 245px
+
 .relative
 	position relative
 .border-bottom
 	border-bottom 1px solid gris_claro
-
+img
+	vertical-align top
 body
 	font-family "Lato"
 	font-size 16px
 figure
 	margin 0
+	position relative
 a
 	text-decoration none
-
+	color #34afef
+.progress
+	margin 1em auto
+	width 80%
+	.min
+	.max
+		font-size .6rem
+		position absolute
+		top -3px
+	.min
+		left -24px
+	.max
+		right -24px
+	.total
+		height 3px
+		background gris_claro
+		width 100%
+	.state
+		height 3px
+		background fucsia
+		width 30%
+	.circle
+		width 10px
+		height 10px
+		background gris_oscuro
+		border-radius 50%
+		position absolute
+		right 0
+		top -3px
 .header
 	margin 0
 	height 3.5em
+	padding 0 1em
 	.button-menu
 		position absolute
 		top 50%
-		margin-top -10px
+		margin-top -6px
 	.menu
 		display none
 	.title
@@ -39,18 +81,51 @@ a
 	font-size 0
 	flex-wrap wrap
 	justify-content space-around
-	.song
-		width 128px
-		font-size 1rem
-		margin 0
-		&:nth-child(even)
-			background #3effcb
-		p
-			margin .5em 0
-		.name
-			color gris_oscuro
-		.autor
-			color gris_claro
+.song
+	width 128px
+	font-size 1rem
+	margin 0
+	&:nth-child(even)
+		background rgba(#ef225c,.2)
+	&:nth-child(odd)
+		background rgba(#006aef,.2)
+	p
+		margin .5em 0
+	.author
+		margin 0 0 2em 0
+.name
+	color gris_oscuro
+	line-height .5
+.author
+	color gris_claro
+	margin-bottom 1em
+.playing
+	&.small
+		width 245px
+.center-text
+	text-align center
+.right-text
+	text-align right
+	
+.padding
+	padding 1em
+.padding-tb
+	padding 1em 0
+.actions
+	position absolute
+	bottom 0
+	left 0
+	right 0
+	background rgba(black, .3)
+.action
+	color white
+	margin-right .5em
+	&:last-child
+		margin-right 0
+	&.gray
+		color gris_oscuro
+	
+
 
 	
 	
